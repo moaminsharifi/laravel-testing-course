@@ -1,8 +1,7 @@
-# 1-Intro-to-Application-Testing
+# 2-Begin-Unit-Testing
 in this branch we will learn how to write tests for our application.
-test scenario:
-1. Visit the home page
-2. Press a "click me" link
-3. See "You have been clicked" message
-4. Assert that Current URL is "/feedback"
-main test is here: [tests/Feature/HomePageTest.php](tests/Feature/HomePageTest.php)
+Product Model Test:
+1. Make in setup
+2. check product has name
+3. check product has price
+main test is here: [tests/Unit/Product.php](tests/Unit/Product.php)
