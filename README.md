@@ -1,7 +1,7 @@
-# 2-Begin-Unit-Testing
+# 3-More-Unit-Testing-Review
 in this branch we will learn how to write tests for our application.
-Product Model Test:
-1. Make in setup
-2. check product has name
-3. check product has price
-main test is here: [tests/Unit/Product.php](tests/Unit/Product.php)
+Order Model Test:
+
+1. check an order consists of products
+2. check can calculate total price
+main test is here: [tests/Unit/OrderTest.php](tests/Unit/OrderTest.php)
