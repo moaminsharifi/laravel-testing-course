@@ -1,5 +1,4 @@
-# 4-Testing-Eloquent-Models
+# 5-Your-Test-Specific-Database-Connection 
 in this branch we will learn how to write tests for our application.
-Article Eloquent Test:
-1. it fetches trending articles      
-main test is here: [tests/Feature/ArticleTest.php](tests/Feature/ArticleTest.php)
+DataBase testing in laravel
+For newer laravel setting database in phpunit.xml work and no need to change anything else
