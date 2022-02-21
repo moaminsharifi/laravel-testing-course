@@ -1,7 +1,5 @@
-# 3-More-Unit-Testing-Review
+# 4-Testing-Eloquent-Models
 in this branch we will learn how to write tests for our application.
-Order Model Test:
-
-1. check an order consists of products
-2. check can calculate total price
-main test is here: [tests/Unit/OrderTest.php](tests/Unit/OrderTest.php)
+Article Eloquent Test:
+1. it fetches trending articles      
+main test is here: [tests/Feature/ArticleTest.php](tests/Feature/ArticleTest.php)
