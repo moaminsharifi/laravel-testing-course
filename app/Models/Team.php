@@ -24,11 +24,17 @@ class Team extends Model
     }
 
     public  function remove($user){
-        // TODO: Find Better way
         if (is_iterable($user)){
-            foreach ($user as $usr){
-                $this->deteachUser($usr);
+
+            $result = $this->members()
+                ->whereIn('id', $user->pluck('id'))->where(
+                    ['team_id'=>$this->id]
+                )
+                ->update(['team_id'=>null]);
+            if ($result == 0){
+                throw new \Exception;
             }
+
         }else {
             $this->deteachUser($user);
         }
@@ -40,6 +46,9 @@ class Team extends Model
         }else{
             throw new \Exception;
         }
+    }
+    public function refreshMembers(){
+        return $this->members()->update(['team_id'=>null]);
     }
     public function members(){
        return  $this->hasMany(User::class);

@@ -106,6 +106,17 @@ class TeamTest extends TestCase
 
         $this->expectException('Exception');
         $teamOne->remove($userForTeamTwo);
+    }
+    public function test_a_team_can_remove_all_members_at_once(){
+        $team = Team::factory()->create(['size'=>100]);
 
+        $users = User::factory()->count(100)->create();
+
+        $team->add($users);
+
+        $this->assertEquals(100 , $team->count());
+        $team->refreshMembers();
+
+        $this->assertEquals(0 , $team->count());
     }
 }
